@@ -78,11 +78,20 @@ ul {
   margin: 0;
 }
 
-img {
+img,
+video {
   width: 100%;
   display: block;
   -o-object-fit: cover;
      object-fit: cover;
+  max-width: 25rem;
+  margin: 0 auto;
+}
+
+video {
+  border-radius: 20px;
+  width: 95%;
+  margin-top: 2rem;
 }
 
 body {
@@ -228,10 +237,11 @@ main .inner-main #home .btn-div {
   width: max-content;
   margin: 0 auto;
   display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   -moz-column-gap: 20px;
        column-gap: 20px;
   row-gap: 10px;
-  flex-wrap: wrap;
 }
 main .inner-main #home .btn-div .btn {
   background-color: var(--clr-sec);
@@ -246,6 +256,11 @@ main .inner-main #home .btn-div .btn {
   flex-wrap: wrap;
   transition: all 0.3s linear;
 }
+main .inner-main #home .btn-div .btn:nth-child(even) {
+  background-color: transparent;
+  border: 1px solid #9c3b39;
+  color: var(--white);
+}
 main .inner-main #home .btn-div .btn:first-child::before {
   content: "\f0c1";
   font-family: "Font Awesome 5 Free";
@@ -258,7 +273,7 @@ main .inner-main #home .btn-div .btn:hover {
 }
 main .inner-main #home .btn-div .btn:last-child {
   background-color: transparent;
-  border: 1px solid #64c6b2;
+  border: 1px solid #bca380;
   color: var(--white);
 }
 main .inner-main #home .btn-div .btn:last-child::before {
